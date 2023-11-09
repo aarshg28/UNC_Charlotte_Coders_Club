@@ -150,9 +150,7 @@ class Home extends Component {
           </div>
         </div>
 
-        <div className="flex flex-row min-w-full">
-          <Footer key="1" />
-        </div>
+        
       </div>
     );
   }
