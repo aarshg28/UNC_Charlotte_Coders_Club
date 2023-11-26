@@ -1,0 +1,52 @@
+create database gosprinters;
+
+use gosprinters;
+
+create table ImgTable (
+	imgId int primary key, 
+	imgPath longtext
+);
+
+
+create table ClubTable (
+	clubId int primary key, 
+	clubName longtext, 
+	clubDesc longtext, 
+	clubImgId int, 
+	FOREIGN KEY (clubImgId) REFERENCES ImgTable(imgId)
+);
+
+create table GrantTable (
+	grantId int primary key,
+	grantName longtext,
+	grantProject longtext,
+	grantDesc longtext
+);
+
+insert into GrantTable values(1, "Code Tonic Club Project (2023 - 2024)", "Developing an AI-Driven Platform for Enhancing Coding Education"
+, "This project aims to create an advanced AI-driven platform that personalizes the learning experience for coding students. It will utilize machine learning algorithms to adapt to individual learning styles and pace. The platform will serve as a supplemental tool for coding bootcamps and university courses, with the intent to improve student engagement and coding proficiency. The project will gather data from diverse learning environments to ensure the AI's teaching strategies are inclusive and effective for a wide range of students.");
+
+insert into GrantTable values(2, "Code Tonic Club Project (2022 - 2023)", "Integrating Open-Source Contributions into Computer Science Curriculum"
+, "This initiative focuses on integrating real-world open-source project contributions into the computer science curriculum. The goal is to provide students with hands-on experience in software development, version control, and collaboration in a distributed environment. The project will partner with existing open-source projects and guide students through the process of contributing meaningful code, documentation, or translations, thus preparing them for the collaborative nature of modern software development.");
+
+insert into GrantTable values(3, "Code Tonic Club Project (2021 - 2022)", "Building a Secure, Scalable Online Voting System", "The objective of this project is to develop a secure and scalable online voting system that can be deployed for university elections. It will involve designing a system architecture that ensures voter anonymity, election integrity, and resistance to tampering or fraud. The project will conduct thorough testing, including penetration testing, to validate the security of the system. Furthermore, it will explore blockchain technology as a means to transparently and immutably record votes, thereby enhancing trust in the digital election process.");
+
+insert into ImgTable values (1, "https://cdn-icons-png.flaticon.com/512/152/152760.png");
+insert into ImgTable values (2, "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1869px-Python-logo-notext.svg.png");
+insert into ImgTable values (3, "https://upload.wikimedia.org/wikipedia/commons/3/32/C%2B%2B_logo.png");
+insert into ImgTable values (4, "https://go.dev/blog/go-brand/Go-Logo/PNG/Go-Logo_Blue.png");
+insert into ImgTable values (5, "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Ruby_logo.svg/2048px-Ruby_logo.svg.png");
+insert into ImgTable values (6, "https://banner2.cleanpng.com/20181209/yvf/kisspng-javascript-angularjs-node-js-computer-icons-clip-a-clipart-js-5c0d82819a4963.228658921544389249632.jpg");
+
+
+insert into ClubTable values (1, "Java", "At the Java Innovators Club, we're on a mission to ignite the passion for Java programming and innovation among UNC students. Our club is all about exploring the limitless possibilities that Java offers. We believe that Java isn't just a programming language; it's a gateway to innovation, creativity, and problem-solving.", 1);
+insert into ClubTable values (2, "Python", "Introducing the Python Pioneers Club at UNC, where we're redefining the way students engage with Python programming. We're not just a coding club; we're a dynamic community of Python enthusiasts, explorers, and trailblazers.", 2);
+insert into ClubTable values (3, "C++", "In our one-of-a-kind club, we're pushing the boundaries of what's possible with C++. C++ isn't just a language; it's a catalyst for high-performance computing, complex systems, and cutting-edge software development. Our mission is to empower students to harness the full potential of C++ and turn their innovative ideas into reality.", 3);
+insert into ClubTable values (4, "Go", "Welcome to the Go-Go Gophers Club, a one-of-a-kind haven for UNC students passionate about Go (Golang) programming. We're not just any coding club; we're a dynamic community of innovators, pioneers, and technology enthusiasts. Our mission is to harness the power of Go to transform the way we approach software development and problem-solving.", 4);
+insert into ClubTable values (5, "Ruby", "The Ruby Revelers Club is a unique UNC community dedicated to the art of Ruby programming. We reimagine Ruby as a powerful tool for creativity and innovation, emphasizing elegant solutions and the art of storytelling. Whether you're a seasoned Ruby developer or a curious novice, join us in celebrating Ruby's beauty and embarking on an exciting journey of creativity, innovation, and mastery.", 5);
+insert into ClubTable values (6, "Java Script", "We're unlocking the full potential of JavaScript. JavaScript isn't just a language; it's a key to building interactive, dynamic, and immersive web experiences that shape the digital world. Our mission is to empower students to see JavaScript as a canvas for innovation, a tool to bring ideas to life, and a means to transform the web.", 6);
+
+
+
+
+
