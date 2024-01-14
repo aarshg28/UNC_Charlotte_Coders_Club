@@ -1,3 +1,4 @@
+UNCC Coders Club
 To run the software system, make sure there is stable internet connection.
 
 Note: For executing the web application, the server needs to be running.
